@@ -9,10 +9,12 @@
 \input{./node_modules/@md-to-latex/title/tex/config/general.tex}
 \input{./node_modules/@md-to-latex/title/tex/config/math.tex}
 \input{./node_modules/@md-to-latex/title/tex/config/toc.tex}
+\input{./node_modules/@md-to-latex/title/tex/config/practice_cfg.tex}
 
 \graphicspath{ {./assets/img/}{./assets/markdown/}{./node_modules/@md-to-latex/title/assets/img/} }
 
 \begin{document}
+    \input{./src/tex/title_router.tex}
 
     \input{./node_modules/@md-to-latex/title/tex/report.tex}
 

@@ -1,0 +1,28 @@
+%
+%
+%
+%
+%
+\newcommand{\getNonPdfTitle}{%
+\ifcsname practiceid\endcsname{%
+\input{./node_modules/@md-to-latex/title/tex/practice.tex}%
+}\else{%
+\input{./node_modules/@md-to-latex/title/tex/report.tex}%
+}\fi%
+}%
+%
+%
+%
+%
+%
+%
+\csname @ifpackageloaded \endcsname%
+{pdfpages}%
+{%
+\IfFileExists{./assets/title/title.pdf}%
+{\includepdf{./assets/title/title.pdf}}%
+{\getNonPdfTitle{}}%
+}%
+{\getNonPdfTitle{}}%
+%
+%
